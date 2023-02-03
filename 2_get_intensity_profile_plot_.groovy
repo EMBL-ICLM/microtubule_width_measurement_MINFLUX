@@ -1,7 +1,7 @@
 //#@ ImagePlus (label = "ignore this") null
 //#@ ImagePlus (label = "image to analyze") imp_input
-#@ Integer	(label = "sampling distance to filament (px)", value = 150) maxDist
-#@ Integer	(label = "RMS window size (one-sided)", value=5) rmsWinSize
+#@ Integer	(label = "sampling distance to filament (px)", value = 100) maxDist
+#@ Integer	(label = "RMS window size (one-sided)", value=0) rmsWinSize
 #@ Boolean	(label = "show individual plot?", value = true) showEach
 #@ Integer	(label = "shift speed (%)", value=95, min=0, max=100, style="slider") processSpeed
 #@ Boolean	(label = "close all Plot window prior to processing?", value = true) closePlot
