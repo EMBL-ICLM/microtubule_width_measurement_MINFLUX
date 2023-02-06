@@ -32,10 +32,10 @@ note: this preview image was coverted to PNG format to be visible on Webpage. To
     </p>  
     
     1st row left to right: 
-       original input image;                   directional filtered image;              Tuneness filtered image  
+       original input image;                directional filtered image;           Tuneness filtered image  
     
     2nd row left to right: 
-       skeleton of tubeness image;             skeleton dilated;                        extracted line segments (overlay with ROIs)
+       skeleton of tubeness image;          skeleton dilated;                     extracted line segments (overlay with ROIs)
 
  <br />
 -  extracted line segments overlay onto sample data, as line-type ROIs stored in ROI Manager.  
