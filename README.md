@@ -7,32 +7,65 @@ It's not always neccesary, at this stage, the user can modify, or fine tuning th
 
 Once the line segments are approved by the user, a [2nd Groovy script](/2_get_intensity_profile_plot_.groovy) can be applied to generate the cumulative intensity profile plot of the image. It takes the input image and the genreated line segment ROIs stored currently in the ROI Manager, scanning through all or selected line segments, and plot cumulative signal intensity against signal's perpendicular distances to the line segments.
 
+##
 
 ## Demo:
 prerequisite: Need Fiji and MorphoLibJ plugin. To install the MorphoLibJ plugin, in Fiji, go to Menu "Help" -> "Update...". After self-checking, within "ImageJ Updater" window, click "Manage update sites". Down the list, locate "IJPB-plugins" and tick the checkbox if it's not yet ticked. Close the "Manage update sites" window, "Apply changes" in "ImageJ Updater" window, and restart Fiji.
 
--  [Sample image](/sample_data/sample_data_rendered_with_4nm_pixel_size.tif), rendered from MINFLUX localization data as density map with 4nm pixel size. The Brightness and Contrast was tuned, and "Red Hot" Lookup table was applied in Fiji, to make visible the microtubule structures.  
+-  [sample image](/sample_data/sample_data_rendered_with_4nm_pixel_size.tif), rendered from MINFLUX localization data as density map with 4nm pixel size. The Brightness and Contrast was tuned, and "Red Hot" Lookup table was applied in Fiji, to make visible the microtubule structures.  
 note: this preview image was coverted to PNG format to adapt to GitHub. To run the script, both TIFF and PNG format works but we used always TIFF format as our input.  
     <p align="center">
-    <img src="/sample_data/sample_data_preview.png" width="700" height=auto>
+    <img src="/sample_data/sample_data_preview.png" width="800" height=auto>
     </p>
 
  <br />
-- With the sample image open in Fiji, run the Groovy script [1_getLineSegments_.groovy](/1_getLineSegments_.groovy). A dialog window will pop up to ask for a few input parameters:  
+ 
+- with the sample image open in Fiji, run the Groovy script [1_getLineSegments_.groovy](/1_getLineSegments_.groovy). A dialog window will pop up to ask for a few input parameters:  
     <p align="center">
-    <img src="/sample_data/script_input_demo_1.png" width="400" height=auto>
+    <img src="/sample_data/script_input_demo_1.png" width="550" height=auto>
     </p>
+    
+ <br />    
+-  intermediate filter results:  
+    <p align="center">
+    <img src="/sample_data/sample_data_filtered_image_preview.png" width="1100" height=auto>
+    </p>  
+    
+    1st row left to right: 
+       original input image;                      directional filtered image;                 Tuneness filtered image  
+    
+    2nd row left to right: 
+       skeleton of tubeness image;                skeleton dilated;                           extracted line segments (overlay with ROIs)
+
+ <br />
+-  extracted line segments overlay onto sample data, as freeline ROIs stored in ROI Manager.  
+    <p align="center">
+    <img src="/sample_data/sample_data_with_line_segments_preview.png" width="1300" height=auto>
+    </p>
+    
     
  <br />
  
--  extracted line segments overlay onto sample data, with line segments stored as freeline ROIs in ROI Manager.  
+- with the now populated ROI Manager, together with the sample input image being the active image in Fiji, run the Groovy script [2_get_intensity_profile_plot_.groovy](/2_get_intensity_profile_plot_.groovy). Another dialog window will appear to ask for input parameters:  
+note: the script will run over selected ROI entries within the ROI Manager. If nothing is selected, it runs over all ROI entries. The user can multi-select ROIs by holding down "ctrl" while clicking onto the ROI entries within the ROI Manager.
     <p align="center">
-    <img src="/sample_data/sample_data_with_line_segments_preview.png" width="800" height=auto>
+    <img src="/sample_data/script_input_demo_2.png" width="550" height=auto>
     </p>
- <br />
- 
-- With the now populated ROI Manager, together with the sample input image, run the Groovy script [2_get_intensity_profile_plot_.groovy](/2_get_intensity_profile_plot_.groovy). Another dialog window will appear to ask for input parameters:  
-    <img src="/sample_data/script_input_demo_2.png" width="400" height=auto>
 
-- With the sample image open in Fiji, run the Groovy script [1_getLineSegments_.groovy](/1_getLineSegments_.groovy). A dialog window will appear to ask for a few input parameters:  
-    <img src="/sample_data/script_output_demo_3.png" width="300" height=auto>
+<br />
+- result: cumulative intensity profile plot:  
+    <p align="center">
+    <img src="/sample_data/script_output_demo_3.png" width="550" height=auto>
+    </p>
+    
+<br />
+- result: statistics of the intensity profile reported to Fiji Log Window:  
+
+    Statistics of data sample_data_rendered_with_4nm_pixel_size.tif , sum
+    filament length: 17861 pixels
+    data:    signal intensity max:0.808, at: 50 ; min:0.016
+              halfMax = 0.404
+              FWHM = 6.550 pixels
+    RMS:     signal intensity max:0.808, at: 50 ; min:0.016
+              halfMax = 0.404
+              FWHM = 6.550 pixels
