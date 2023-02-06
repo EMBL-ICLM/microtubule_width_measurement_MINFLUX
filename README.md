@@ -2,8 +2,8 @@
 
 ## Workflow Description:
 
-This workflow takes image rendered from localization data as input. With the image open (and active) in Fiji, a [1st Groovy script](/1_getLineSegments_.groovy) will apply a set of filters to highlight curvilinear structures within the image, and then extract skeletons, and eventually the line segments. The line segments will be displayed as ImageJ freeline ROIs, and stored in ROI Manager of Fiji.  
-It's not always neccesary, at this stage, the user can modify, or fine tuning the line segments ROIs. The same as editing ROIs with ROI Manager, the user can add (means manual drawing), remove, or modify on the freeline ROIs.  
+This workflow takes image rendered from localization data as input. With the image open (and active) in Fiji, a [1st Groovy script](/1_getLineSegments_.groovy) will apply a set of filters to highlight curvilinear structures within the image, and then extract skeletons, and eventually the line segments. The line segments will be displayed as ImageJ line-type ROIs, and stored in ROI Manager of Fiji.  
+It's not always neccesary, at this stage, the user can modify, or fine tuning the line segments ROIs. The same as editing ROIs with ROI Manager, the user can add (means manual drawing), remove, or modify on the ROIs.  
 
 Once the line segments are approved by the user, a [2nd Groovy script](/2_get_intensity_profile_plot_.groovy) can be applied to generate the cumulative intensity profile plot of the image. It takes the input image and the genreated line segment ROIs stored currently in the ROI Manager, scanning through all or selected line segments, and plot cumulative signal intensity against signal's perpendicular distances to the line segments.
 
@@ -38,7 +38,7 @@ note: this preview image was coverted to PNG format to adapt to GitHub. To run t
        skeleton of tubeness image;                skeleton dilated;                           extracted line segments (overlay with ROIs)
 
  <br />
--  extracted line segments overlay onto sample data, as freeline ROIs stored in ROI Manager.  
+-  extracted line segments overlay onto sample data, as line-type ROIs stored in ROI Manager.  
     <p align="center">
     <img src="/sample_data/previews/sample_data_with_line_segments_preview.png" width="1300" height=auto>
     </p>
