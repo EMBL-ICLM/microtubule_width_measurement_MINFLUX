@@ -13,7 +13,7 @@ Once the line segments are approved by the user, a [2nd Groovy script](/2_get_in
 prerequisite: Need Fiji and MorphoLibJ plugin. To install the MorphoLibJ plugin, in Fiji, go to Menu "Help" -> "Update...". After self-checking, within "ImageJ Updater" window, click "Manage update sites". Down the list, locate "IJPB-plugins" and tick the checkbox if it's not yet ticked. Close the "Manage update sites" window, "Apply changes" in "ImageJ Updater" window, and restart Fiji.
 
 -  [sample image](/sample_data_rendered_with_4nm_pixel_size.tif), rendered from MINFLUX localization data as density map with 4nm pixel size. The Brightness and Contrast was tuned, and "Red Hot" Lookup table was applied in Fiji, to make visible the microtubule structures.  
-note: this preview image was coverted to PNG format to adapt to GitHub. To run the script, both TIFF and PNG format works but we used always TIFF format as our input.  
+note: this preview image was coverted to PNG format to be visible on Webpage. To run the script, both TIFF and PNG format works but we used always TIFF format as our input.  
     <p align="center">
     <img src="/preview/sample_data_preview.png" width="800" height=auto>
     </p>
