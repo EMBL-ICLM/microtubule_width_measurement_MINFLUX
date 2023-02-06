@@ -24,7 +24,7 @@ note: this preview image was coverted to PNG format to adapt to GitHub. To run t
  <br />
  
 - [extracted line segments overlay onto sample data](/sample_data/sample_data_with_line_segments_preview.png)  
-    <img src="/sample_data/sample_data_with_line_segments(preview).png" width="550" height=auto>
+    <img src="/sample_data/sample_data_with_line_segments_preview.png" width="550" height=auto>
        
  <br />
  
