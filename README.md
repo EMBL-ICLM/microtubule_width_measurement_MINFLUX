@@ -11,10 +11,10 @@ Once the line segments are approved by the user, a [2nd Groovy script](/2_get_in
 ## Demo:
 prerequisite: Need Fiji and MorphoLibJ plugin. To install the MorphoLibJ plugin, in Fiji, go to Menu "Help" -> "Update...". After self-checking, within "ImageJ Updater" window, click "Manage update sites". Down the list, locate "IJPB-plugins" and tick the checkbox if it's not yet ticked. Close the "Manage update sites" window, "Apply changes" in "ImageJ Updater" window, and restart Fiji.
 
--  [Sample image](/sample_data/sample_data(rendered_with_4nm_pixel_size).tif), rendered from MINFLUX localization data as density map with 4nm pixel size. The Brightness and Contrast was tuned, and "Red Hot" Lookup table was applied in Fiji, to make visible the microtubule structures.  
+-  [Sample image](/sample_data/sample_data_rendered_with_4nm_pixel_size.tif), rendered from MINFLUX localization data as density map with 4nm pixel size. The Brightness and Contrast was tuned, and "Red Hot" Lookup table was applied in Fiji, to make visible the microtubule structures.  
 note: this preview image was coverted to PNG format to adapt to GitHub. To run the script, both TIFF and PNG format works but we used always TIFF format as our input.
     
-    <img src="/sample_data/sample_data(preview).png" width="550" height=auto>
+    <img src="/sample_data/sample_data_preview.png" width="550" height=auto>
    
  <br />
  
@@ -23,7 +23,7 @@ note: this preview image was coverted to PNG format to adapt to GitHub. To run t
        
  <br />
  
-- [extracted line segments overlay onto sample data](/sample_data/sample_data_with_line_segments(preview).png)  
+- [extracted line segments overlay onto sample data](/sample_data/sample_data_with_line_segments_preview.png)  
     <img src="/sample_data/sample_data_with_line_segments(preview).png" width="550" height=auto>
        
  <br />
